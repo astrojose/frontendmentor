@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @font-face {
+      font-family: "Montserrat";
+      src: url("https://fonts.google.com/specimen/Montserrat");
+    }
+    @font-face {
+      font-family: "Fraunces";
+      src: url("https://fonts.google.com/specimen/Fraunces");
+    }
+  </style>
+</head>
+<body>
+  <div class="h-screen w-full bg-cream flex items-center justify-center">
+    <div class="flex flex-col rounded-lg">
+      <div class="preview">
+        <img src="./images/image-product-mobile.jpg" alt="" class="object-cover">
+      </div>
+      <div class="content bg-white p-[24px] space-y-4">
+        <span class="text-lg">Gabrielle Essence Eau De Parfum</span>
+        <p text-paragraph>
+          A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="price flex space-x-4">
+          <span class='text-darkCyan font-fraunces text-base font-extrabold  '>$149.99</span>
+          <span class="line-through font-thin text-4xl	">$169.99</span>
+        </div>
+       <button class="bg-darkCyan text-white px-5 py-1 rounded-md">Add to Cart</button> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">astrojose</a>.
+  </div>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            darkCyan: 'hsl(158, 36%, 37%)',
+            cream: 'hsl(30, 38%, 92%)',
+            darkBlue: 'hsl(158, 36%, 37%)',
+            darkGreyishBlue: 'hsl(228, 12%, 48%)',
+            white: 'hsl(0, 0%, 100%)'
+          },
+        },
+        screens: {
+          'xs': '375px',
+          'md':'1440px'
+        },
+        fontSize: {
+          paragraph: '.875rem'
+        },
+        fontFamily: {
+          montserrat: ["Montserrat", "sans-serif"],
+          fraunces: ["Fraunces", "cursive"],
+        }
+  
+      }
+    }
+  </script>
+</body>
+</html>
